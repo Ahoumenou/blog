@@ -25,7 +25,8 @@ class ArticleFactory extends Factory
             'user_id' => function () {
                 return User::inRandomOrder()->first()->id;
             },
-            'image' => $this->faker->image('public/images'),
+            'image' => $this->faker->image(public_path('/images')),
         ];
     }
+
 }

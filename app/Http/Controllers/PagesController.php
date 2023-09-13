@@ -20,12 +20,5 @@ class PagesController extends Controller
     {
         return view('layouts.about');
     }
-    public function show($id)
-    {
-        $article = Article::with('user')->where('id', $id)->firstOrFail();
-        // dd($article);
-        // ddd($article);
-        return view('articles.show', compact('article'));
-        // return view('articles.show');
-    }
+   
 }

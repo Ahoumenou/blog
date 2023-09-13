@@ -30,6 +30,11 @@ Route::get('/articles', [ArticlesController::class, 'articles']);
 Route::get('/contact-us', [PagesController::class, 'contact']);
 Route::get('/about', [PagesController::class, 'about']);
 
-// Route::get('article/{article}', [ArticlesController::class, 'show']);
-Route::get('/article/{id}', [ArticlesController::class, 'show']);
-Route::get('/article/{id}', [PagesController::class, 'show']);
+Route::get('/articles/{id}', [ArticlesController::class, 'show']);
+// Route::get('/article/{id}', [ArticlesController::class, 'show']);
+Route::get('/article/{article:title}', [ArticlesController::class, 'show']);
+Route::get('/enregistrement', [ArticlesController::class, 'create']);
+Route::post('/articles/create', [ArticlesController::class, 'store']);
+Route::get('article/{article}/edit', [ArticlesController::class, 'edit']);
+Route::patch('/article/{article}/edit', [ArticlesController::class, 'update']);
+Route::delete('article/{article}/delete', [ArticlesController::class, 'delete']);
