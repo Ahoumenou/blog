@@ -56,4 +56,8 @@ public function profile()
 {
     return $this->hasOne(Profile::class);
 }
+public function isAdmin(){
+        return view('articles.create');
+        // $this->user->isAdmin();
+}
 }

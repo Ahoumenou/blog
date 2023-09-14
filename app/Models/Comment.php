@@ -17,6 +17,6 @@ public function user()
 // Un commentaire n'a qu'un article
 public function article()
 {
-    return $this->belongsTo(User::class);
+    return $this->belongsTo(Article::class);
 }
 }

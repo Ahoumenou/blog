@@ -8,7 +8,7 @@
 </head>
 <body>
     
-    <a href="\articles">Accueil</a>
+    <a href="/articles">Accueil</a>
     <h3> {{$article['title']}} </h3>
     <img src=" {{$article['image']}} " alt="image {{$article["id"]}} ">
     <p> {{ $article['body']}} </p>
